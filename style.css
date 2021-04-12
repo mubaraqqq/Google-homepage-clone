@@ -1,27 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 body {
-    background-color: rgb(180, 178, 178);   
+    height: 100%;
+    width: 100%;
+    background-color: rgb(233, 230, 230); 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;  
+    overflow: hidden;
 }
 /* Navigation bar */
+nav a {
+    font-size: 13px;
+    display: inline-block;
+    font-weight: 400;
+    /* line-height: 24px; */
+    color: rgb(0, 0, 0, 0.87);
+    cursor: pointer;
+}
 ul{
     list-style-type: none;
     margin-top: 0.5rem;
     margin-bottom: 0;
-    padding: 0;
+    padding-right: 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
 }
-a{
+.nav-link {
+    padding-right: 13px;
+}
+#grid {
+    padding: 5px;
+}
+li a div p {
+    padding: 2px;
+}
+.nav-bar a, .footer-link a {
     text-decoration: none;
     color: black;
+}
+a:hover, .lang a:hover {
+    text-decoration: underline;
+    opacity: 0.85;
 }
 div.nav-bar>nav>ul>li{
     margin-top: 0.5rem;
     margin-left: 1rem;
 }
 div#profile-icon{
-    background-color: rgb(255, 38, 0);
+    background-color: rgb(240, 106, 16);
     width: 35px;
     height: 35px;
     text-align: center;
@@ -37,4 +67,299 @@ li>a>div>p{
 li>a>img{
     width: 1.2rem;
     height: 1.2rem;
+}
+
+#google-logo {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    width: auto;
+}
+
+.lang a {
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+}
+
+main #google-logo {
+    display: block;
+    margin: 0px auto;
+    margin-top: 107px;
+}
+
+main #google-logo:hover {
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 580px;
+    margin: 0px auto;
+    position: relative;
+    margin-top: -8px;
+    text-align: center;
+}
+
+.search-bar .s-input {
+    display: block;
+    border: 1px solid #ddd;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+    padding: 13px 45px;
+    border-radius: 25px;
+    width: 85%;
+    transition: box-shadow 100ms;
+    outline: none;
+}
+
+.search-bar .s-input:hover {
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05),
+                0 0 2px rgba(0, 0, 0, 0.05),
+                0 0 3px rgba(0, 0, 0, 0.05),
+                0 0 4px rgba(0, 0, 0, 0.05),
+                0 0 5px rgba(0, 0, 0, 0.05),
+                0 0 4px rgba(0, 0, 0, 0.05),
+                0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar .search-icon {
+    width: 20px;
+    opacity: .4;
+    position: absolute;
+    top: 13px;
+    left: 14px;
+}
+
+.search-bar .vs-icon {
+    width: 20px;
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    opacity: .4;
+}
+
+.search-bar .search-icon:hover, .search-bar .vs-icon:hover {
+    cursor: pointer;
+}
+
+.s-btn {
+    border: 1px solid transparent;
+    padding: 9px 15px;
+    color: #666;
+    font-size: 14px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 28px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 100ms;
+}
+
+.s-btn:hover {
+    border: 1px solid #aaa;
+}
+
+.lang {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #111;
+}
+
+.lang a {
+    margin-left: 5px;
+    color: #1a0dab;
+}
+
+.lang a:hover {
+    text-decoration: underline;
+}
+
+/* footer {
+    background: #f2f2f2;
+    margin-top: 180px;
+} */
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+footer h4 {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 15px;
+    line-height: 39.5px;
+    font-weight: 400;
+    padding-left: 29px;
+    border: 1px solid #eee;
+}
+
+footer a, footer div p {
+    color: #5f6368;
+    display: inline-block;
+    padding: 12px 11.3px;
+    font-size: 14px;
+}
+
+footer div.link-3 {
+    text-align: center;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-link {
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-1 {
+    padding-left: 18.7px;
+    flex: 1;
+}
+
+.link-2 {
+    padding-right: 18.7px;
+    flex: 1;
+}
+
+.link-3 {
+    flex: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+    footer {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    footer {
+        position: absolute;
+        bottom: 0px;
+    }
+    .search-bar {
+        width: 360px;
+    }
+    .search-bar .vs-icon {
+        width: 20px;
+        right: 0px;
+    }
+    .search-bar .s-input {
+        width: 79%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px) {
+    .search-bar {
+        width: 320px;
+    }
+    .search-bar .vs-icon {
+        width: 20px;
+        right: 0px;
+    }
+    .search-bar .s-input {
+        width: 79%;
+    }
+    footer {
+        position: absolute;
+        bottom: 0px;
+    }
+    main #google-logo {
+        margin-top: 10px;
+        height: 180px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 399px) {
+    main #google-logo {
+        margin-top: 10px;
+        height: 140px;
+        width: 160px;
+    }
+    .search-bar {
+        width: 300px;
+    }
+    .search-bar .vs-icon {
+        top: 16px;
+        width: 18px;
+        right: 20px;
+    }
+    .search-bar .s-input {
+        width: 78%;
+        padding: 15px 28px;
+    }
+    .search-bar .search-icon {
+        top: 16px;
+        width: 15px;
+    }
+    #grid, li a div p, .nav-link {
+        padding: 0px;
+    }
+    .s-btn {
+        margin-right: 0px;
+        font-size: 10px;
+    }
+    footer h4, footer a, footer div p, nav a {
+        font-size: 10px;
+    }
+    div.lang {
+        font-size: 10px;
+        margin-top: 15px;
+    }
+    li a div p {
+        padding-top: 4.5px;
+    }
+}
+
+
+@media screen and (max-width:299px) {
+    main #google-logo {
+        margin-top: 67px;
+    }
+    .search-bar {
+        width: 260px;
+    }
+    .search-bar .vs-icon {
+        top: 16px;
+        width: 18px;
+        right: 18px;
+    }
+    .search-bar .s-input {
+        width: 78%;
+        padding: 15px 28px;
+    }
+    .search-bar .search-icon {
+        top: 16px;
+        width: 15px;
+    }
+    #grid, li a div p, .nav-link {
+        padding: 0px;
+    }
+    .s-btn {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    footer h4, footer a, footer div p, nav a {
+        font-size: 12px;
+    }
+    main #google-logo {
+        margin-top: 10px;
+        height: 90px;
+        width: 90px;
+    }
+    div.lang {
+        font-size: 11px;
+    }
 }
