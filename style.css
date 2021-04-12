@@ -186,7 +186,7 @@ main #google-logo:hover {
 } */
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     right: 0px;
     left: 0px;
@@ -238,14 +238,14 @@ footer a:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1030px) {
     footer {
-        position: absolute;
+        position: fixed;
         bottom: 0px;
     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
     footer {
-        position: absolute;
+        position: fixed;
         bottom: 0px;
     }
     .search-bar {
@@ -272,7 +272,7 @@ footer a:hover {
         width: 79%;
     }
     footer {
-        position: absolute;
+        position: fixed;
         bottom: 0px;
     }
     main #google-logo {
